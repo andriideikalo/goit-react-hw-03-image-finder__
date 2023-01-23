@@ -1,7 +1,8 @@
 import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
+import '../Styles/styles.css';
 
-class Searchbar extends Component {
+export class Searchbar extends Component {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
   };

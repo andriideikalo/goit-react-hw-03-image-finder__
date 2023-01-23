@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 
-class Modal extends Component {
+export class Modal extends Component {
   static propTypes = {
     image: PropTypes.string.isRequired,
     onCloseModal: PropTypes.func.isRequired,

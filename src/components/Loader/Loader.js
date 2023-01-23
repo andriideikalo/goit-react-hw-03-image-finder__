@@ -1,17 +1,17 @@
 import React from 'react';
-import { ThreeDots } from 'react-loader-spinner';
+// import { TailSpin } from 'react-loader-spinner';
 
-const Loader = () => {
+export const Loader = () => {
   return (
     <div
       style={{
         position: 'fixed',
         left: '50%',
-        top: '99%',
+        top: '50%',
         transform: 'translate(-50%,-50%)',
       }}
     >
-      <ThreeDots color="tomato" width={80} height={80} />
+      {/* <TailSpin color="#3f51b5" width={80} height={80} /> */}
     </div>
   );
 };

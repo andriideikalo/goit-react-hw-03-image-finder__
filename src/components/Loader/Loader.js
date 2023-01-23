@@ -1,5 +1,5 @@
 import React from 'react';
-// import { TailSpin } from 'react-loader-spinner';
+import { ThreeDots } from 'react-loader-spinner';
 
 export const Loader = () => {
   return (
@@ -7,11 +7,11 @@ export const Loader = () => {
       style={{
         position: 'fixed',
         left: '50%',
-        top: '50%',
+        top: '98%',
         transform: 'translate(-50%,-50%)',
       }}
     >
-      {/* <TailSpin color="#3f51b5" width={80} height={80} /> */}
+      <ThreeDots color="#3f51b5" width={80} height={80} />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import React from 'react';
 
-export const Button = ({ onClick }) => (
+const Button = ({ onClick }) => (
   <button type="button" className="Button" onClick={onClick}>
     Load more
   </button>

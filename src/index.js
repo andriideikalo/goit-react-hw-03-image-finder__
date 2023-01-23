@@ -1,10 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
+import 'modern-normalize/modern-normalize.css';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import './index.css';
+import './Components/Styles/styles.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './Components/App';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );

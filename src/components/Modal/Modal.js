@@ -1,0 +1,42 @@
+import { PropTypes } from 'prop-types';
+import React, { Component } from 'react';
+
+export class Modal extends Component {
+  static propTypes = {
+    image: PropTypes.string.isRequired,
+    onCloseModal: PropTypes.func.isRequired,
+  };
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.onEscClick);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onEscClick);
+  }
+
+  onEscClick = e => {
+    if (!e.key === 'Escape') return;
+
+    this.props.onCloseModal();
+  };
+
+  onBackdropClick = e => {
+    if (e.target !== e.currentTarget) return;
+
+    this.props.onCloseModal();
+  };
+
+  render = () => {
+    const { image } = this.props;
+    return (
+      <div className="Overlay" onClick={this.onBackdropClick}>
+        <div className="Modal">
+          <img src={image} />
+        </div>
+      </div>
+    );
+  };
+}
+
+export default Modal;

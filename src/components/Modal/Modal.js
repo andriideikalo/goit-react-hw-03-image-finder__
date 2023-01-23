@@ -32,11 +32,11 @@ export class Modal extends Component {
     return (
       <div className="Overlay" onClick={this.onBackdropClick}>
         <div className="Modal">
-          <img src={image} />
+          <img src={image} alt="foto" />
         </div>
       </div>
     );
   };
 }
-
+// console.log(Modal);
 export default Modal;

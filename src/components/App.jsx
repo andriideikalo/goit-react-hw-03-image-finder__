@@ -30,6 +30,7 @@ export class App extends Component {
         .finally(() => this.setState({ isLoading: false }));
     }
   }
+
   onSearchSubmit = query => {
     if (query === this.state.query) return;
 

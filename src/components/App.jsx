@@ -1,4 +1,3 @@
-// import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import api from './API/API';
 import Searchbar from './Searchbar/Searchbar';

@@ -2,8 +2,12 @@
 import React from 'react';
 
 export const ImageGalleryItem = ({ image, onImageClick }) => (
-  <li class="gallery-item">
-    <img src={image.webformatURL} alt={image.tags} />
+  <li className="ImageGalleryItem">
+    <img
+      src={image.webformatURL}
+      alt={image.tags}
+      className="ImageGalleryItem-image"
+    />
   </li>
 );
 

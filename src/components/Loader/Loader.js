@@ -11,7 +11,7 @@ export const Loader = () => {
         transform: 'translate(-50%,-50%)',
       }}
     >
-      <ThreeDots color="#3f51b5" width={80} height={80} />
+      <ThreeDots color="tomato" width={80} height={80} />
     </div>
   );
 };

@@ -1,10 +1,10 @@
 import 'modern-normalize/modern-normalize.css';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import './index.css';
-import './Components/Styles/styles.css';
+import './components/Styles/styles.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './Components/App';
+import App from './components/App';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,3 +12,9 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );

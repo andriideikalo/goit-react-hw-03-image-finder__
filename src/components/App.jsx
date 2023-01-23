@@ -6,7 +6,7 @@ import Loader from './Loader';
 import Button from './Button';
 import api from '../API/API';
 
-class App extends Component {
+export class App extends Component {
   state = {
     images: [],
     modalImage: null,

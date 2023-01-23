@@ -2,9 +2,11 @@ import { PropTypes } from 'prop-types';
 import React from 'react';
 
 const Button = ({ onClick }) => (
-  <button type="button" className="Button" onClick={onClick}>
-    Load more
-  </button>
+  <div className="SectionButton">
+    <button type="button" className="Button" onClick={onClick}>
+      Load more
+    </button>
+  </div>
 );
 
 Button.propTypes = {

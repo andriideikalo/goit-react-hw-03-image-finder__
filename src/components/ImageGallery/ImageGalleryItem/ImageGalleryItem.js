@@ -1,26 +1,17 @@
-// import { PropTypes } from 'prop-react';
 import React from 'react';
+import {
+  ImageGalleryItemStyles,
+  ImageGalleryItemImage,
+} from './ImageGalleryItemStyles';
 
 export const ImageGalleryItem = ({ image, onImageClick }) => (
-  <li
-    className="ImageGalleryItem"
-    onClick={() => onImageClick(image.largeImageURL)}
-  >
-    <img
+  <ImageGalleryItemStyles onClick={() => onImageClick(image.largeImageURL)}>
+    <ImageGalleryItemImage
       src={image.webformatURL}
       alt={image.tags}
       className="ImageGalleryItem-image"
     />
-  </li>
+  </ImageGalleryItemStyles>
 );
-
-// ImageGalleryItem.propTypes = {
-//   image: PropTypes.shape({
-//     webformatURL: PropTypes.string.isRequired,
-//     largeImageURL: PropTypes.string.isRequired,
-//     tags: PropTypes.string.isRequired,
-//   }),
-//   onImageClick: PropTypes.func.isRequired,
-// };
 
 export default ImageGalleryItem;

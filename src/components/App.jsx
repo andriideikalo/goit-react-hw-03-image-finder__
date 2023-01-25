@@ -12,7 +12,7 @@ export class App extends Component {
     modalImage: null,
     query: '',
     page: 1,
-    isModalOpen: false,
+    showModal: false,
     isLoading: false,
   };
 
@@ -38,7 +38,7 @@ export class App extends Component {
       query: query,
       page: 1,
       images: [],
-      isModalOpen: false,
+      showModal: false,
       isLoading: true,
     });
   };
@@ -48,19 +48,19 @@ export class App extends Component {
   };
 
   onImageClick = largeImage =>
-    this.setState({ isModalOpen: true, modalImage: largeImage });
+    this.setState({ showModal: true, modalImage: largeImage });
 
-  onCloseModal = () => this.setState({ isModalOpen: false });
+  onCloseModal = () => this.setState({ showModal: false });
 
   render = () => {
-    const { isLoading, isModalOpen, images, modalImage } = this.state;
+    const { isLoading, showModal, images, modalImage } = this.state;
     return (
       <>
         <Searchbar onSubmit={this.onSearchSubmit} />
         {images.length > 0 && (
           <ImageGallery images={images} onImageClick={this.onImageClick} />
         )}
-        {isModalOpen && (
+        {showModal && (
           <Modal image={modalImage} onCloseModal={this.onCloseModal} />
         )}
         {isLoading && <Loader />}

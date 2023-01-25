@@ -1,10 +1,13 @@
 import { PropTypes } from 'prop-types';
 import React from 'react';
+import { ButtonStyles, ButtonSection } from './ButtonStyles';
 
 export const Button = ({ onClick }) => (
-  <button type="button" className="Button" onClick={onClick}>
-    Load more
-  </button>
+  <ButtonSection>
+    <ButtonStyles type="button" className="Button" onClick={onClick}>
+      Load more
+    </ButtonStyles>
+  </ButtonSection>
 );
 
 Button.propTypes = {

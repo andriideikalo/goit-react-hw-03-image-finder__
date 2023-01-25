@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 
-export class Modal extends Component {
+class Modal extends Component {
   static propTypes = {
     image: PropTypes.string.isRequired,
     onCloseModal: PropTypes.func.isRequired,
@@ -32,11 +32,11 @@ export class Modal extends Component {
     return (
       <div className="Overlay" onClick={this.onBackdropClick}>
         <div className="Modal">
-          <img src={image} alt="foto" />
+          <img src={image} alt={image.tags} />
         </div>
       </div>
     );
   };
 }
-// console.log(Modal);
+
 export default Modal;

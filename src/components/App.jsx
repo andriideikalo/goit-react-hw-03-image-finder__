@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-// import api from './API/API';
-import Searchbar from './Searchbar/Searchbar';
-import ImageGallery from './ImageGallery/ImageGallery';
-import Loader from './Loader/Loader';
-import Button from './Button/Button';
-import Modal from './Modal/Modal';
+import { Component } from 'react';
+// // import api from './API/API';
+// import Searchbar from './Searchbar/Searchbar';
+// import ImageGallery from './ImageGallery/ImageGallery';
+// import Loader from './Loader/Loader';
+// import Button from './Button/Button';
+// import Modal from './Modal/Modal';
 
 export class App extends Component {
   state = {
@@ -31,17 +31,17 @@ export class App extends Component {
   //   }
   // }
 
-  onSearchSubmit = query => {
-    if (query === this.state.query) return;
+  // onSearchSubmit = query => {
+  //   if (query === this.state.query) return;
 
-    this.setState({
-      query: query,
-      page: 1,
-      images: [],
-      showModal: false,
-      isLoading: true,
-    });
-  };
+  //   this.setState({
+  //     query: query,
+  //     page: 1,
+  //     images: [],
+  //     showModal: false,
+  //     isLoading: true,
+  //   });
+  // };
 
   onLoadMore = () => {
     this.setState(prev => ({ page: prev.page + 1, isLoading: true }));

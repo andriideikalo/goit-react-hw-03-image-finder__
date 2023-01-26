@@ -28,7 +28,7 @@ class Modal extends Component {
     this.props.onCloseModal();
   };
 
-  render = () => {
+  render() {
     const { image } = this.props;
     return (
       <Overlay onClick={this.onBackdropClick}>
@@ -37,7 +37,7 @@ class Modal extends Component {
         </ModalContent>
       </Overlay>
     );
-  };
+  }
 }
 
 export default Modal;

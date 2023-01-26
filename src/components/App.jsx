@@ -1,6 +1,6 @@
 import { Component } from 'react';
 // import api from './API/API';
-import Searchbar from './Searchbar/Searchbar';
+import Searchbar from './Searchbar';
 // import ImageGallery from './ImageGallery/ImageGallery';
 // import Loader from './Loader/Loader';
 // import Button from './Button/Button';
@@ -56,7 +56,8 @@ export class App extends Component {
     //     const { isLoading, showModal, images, modalImage } = this.state;
     return (
       //       <>
-      <Searchbar onSubmit={this.onSearchSubmit} />
+      <Searchbar />
+      // <Searchbar onSubmit={this.onSearchSubmit} />
       //   {images.length > 0 && (
       //     <ImageGallery images={images} onImageClick={this.onImageClick} /> )}
       //      {showModal && (

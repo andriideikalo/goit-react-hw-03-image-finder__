@@ -1,4 +1,4 @@
-import { Component } from 'react';
+// import { Component } from 'react';
 // import api from './API/API';
 // import Searchbar from './Searchbar/Searchbar';
 // import ImageGallery from './ImageGallery/ImageGallery';

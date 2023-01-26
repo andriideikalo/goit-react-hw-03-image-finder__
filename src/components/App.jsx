@@ -52,7 +52,7 @@ export class App extends Component {
 
   onCloseModal = () => this.setState({ showModal: false });
 
-  render = () => {
+  render() {
     //     const { isLoading, showModal, images, modalImage } = this.state;
     return (
       //       <>
@@ -67,7 +67,7 @@ export class App extends Component {
       //       )}
       //       </>
     );
-  };
+  }
 
   // <div
   //   style={{

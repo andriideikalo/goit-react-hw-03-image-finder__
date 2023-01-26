@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import getImages from './API/API';
+import api from './API/API';
 // import Searchbar from './Searchbar/Searchbar';
 // import ImageGallery from './ImageGallery/ImageGallery';
 // import Loader from './Loader/Loader';
@@ -16,20 +16,20 @@ export class App extends Component {
     isLoading: false,
   };
 
-  componentDidUpdate(prevProps, prevState) {
-    if (
-      prevState.query !== this.state.query ||
-      prevState.page !== this.state.page
-    ) {
-      // api
-      getImages(this.state.query, this.state.page)
-        .then(images =>
-          this.setState(prev => ({ images: [...prev.images, ...images] }))
-        )
-        .catch(console.log)
-        .finally(() => this.setState({ isLoading: false }));
-    }
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (
+  //     prevState.query !== this.state.query ||
+  //     prevState.page !== this.state.page
+  //   ) {
+  //     api
+  //       .getImages(this.state.query, this.state.page)
+  //       .then(images =>
+  //         this.setState(prev => ({ images: [...prev.images, ...images] }))
+  //       )
+  //       .catch(console.log)
+  //       .finally(() => this.setState({ isLoading: false }));
+  //   }
+  // }
 
   // export const App = () => {
   // return (

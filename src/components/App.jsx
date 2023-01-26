@@ -1,6 +1,6 @@
 import { Component } from 'react';
 // import api from './API/API';
-import Searchbar from './Searchbar';
+// import Searchbar from './Searchbar';
 // import ImageGallery from './ImageGallery/ImageGallery';
 // import Loader from './Loader/Loader';
 // import Button from './Button/Button';
@@ -52,23 +52,23 @@ export class App extends Component {
 
   onCloseModal = () => this.setState({ showModal: false });
 
-  render() {
-    //     const { isLoading, showModal, images, modalImage } = this.state;
-    return (
-      //       <>
-      <Searchbar />
-      // <Searchbar onSubmit={this.onSearchSubmit} />
-      //   {images.length > 0 && (
-      //     <ImageGallery images={images} onImageClick={this.onImageClick} /> )}
-      //      {showModal && (
-      //          <Modal image={modalImage} onCloseModal={this.onCloseModal} /> )}
-      //       {isLoading && <Loader />}
-      //        {images.length > 0 && !isLoading && (
-      //          <Button onClick={this.onLoadMore} />
-      //       )}
-      //       </>
-    );
-  }
+  // render() {
+  //     const { isLoading, showModal, images, modalImage } = this.state;
+  // return (
+  //       <>
+
+  // <Searchbar onSubmit={this.onSearchSubmit} />
+  //   {images.length > 0 && (
+  //     <ImageGallery images={images} onImageClick={this.onImageClick} /> )}
+  //      {showModal && (
+  //          <Modal image={modalImage} onCloseModal={this.onCloseModal} /> )}
+  //       {isLoading && <Loader />}
+  //        {images.length > 0 && !isLoading && (
+  //          <Button onClick={this.onLoadMore} />
+  //       )}
+  //       </>
+  // );
+  // }
 
   // <div
   //   style={{

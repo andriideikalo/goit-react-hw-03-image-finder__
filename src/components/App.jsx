@@ -82,5 +82,3 @@ export class App extends Component {
   //   React template
   // </div>
 }
-
-export default App;

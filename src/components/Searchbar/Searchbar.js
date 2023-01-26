@@ -31,7 +31,7 @@ export class Searchbar extends Component {
     this.setState({ query: '' });
   };
 
-  render = () => {
+  render() {
     return (
       <SearchbarStyles>
         <SearchForm onSubmit={this.handleSubmit}>
@@ -50,7 +50,7 @@ export class Searchbar extends Component {
         </SearchForm>
       </SearchbarStyles>
     );
-  };
+  }
 }
 
 export default Searchbar;

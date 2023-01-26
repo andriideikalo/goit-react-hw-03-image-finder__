@@ -31,16 +31,16 @@ export class App extends Component {
   //   }
   // }
 
-  onSearchSubmit = query => {
-    if (query === this.state.query) return;
+  // onSearchSubmit = query => {
+  //   if (query === this.state.query) return;
 
-    this.setState({
-      query: query,
-      page: 1,
-      images: [],
-      showModal: false,
-      isLoading: true,
-    });
+  //   this.setState({
+  //     query: query,
+  //     page: 1,
+  //     images: [],
+  //     showModal: false,
+  //     isLoading: true,
+  //   });
   };
 
   onLoadMore = () => {

@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import { Overlay, ModalContent } from './ModalStyles';
 
-class Modal extends Component {
+export class Modal extends Component {
   static propTypes = {
     image: PropTypes.string.isRequired,
     onCloseModal: PropTypes.func.isRequired,

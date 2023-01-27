@@ -13,18 +13,20 @@ export class App extends Component {
     modalImage: null,
     query: '',
     page: 1,
+    lastPage: 1,
     showModal: false,
     isLoading: false,
   };
 
   componentDidUpdate(prevProps, prevState) {
-    if (
-      prevState.query !== this.state.query ||
-      prevState.page !== this.state.page
-    ) {
-      fetchImges(this.state.query, this.state.page)
+    const { page, query, lastPage } = this.state;
+    if (prevState.query !== query || prevState.page !== page) {
+      fetchImges(query, page, lastPage)
         .then(images =>
-          this.setState(prev => ({ images: [...prev.images, ...images] }))
+          this.setState(prev => ({
+            images: [...prev.images, ...images],
+            // lastPage: Math.ceil(totalHits / 12),
+          }))
         )
         .catch(console.log)
         .finally(() => this.setState({ isLoading: false }));

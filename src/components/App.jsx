@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import api from './API/API';
+// import api from './API/API';
+import { fetchImges } from './API/API';
 import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
 import Loader from './Loader/Loader';
@@ -21,8 +22,7 @@ export class App extends Component {
       prevState.query !== this.state.query ||
       prevState.page !== this.state.page
     ) {
-      api
-        .getImages(this.state.query, this.state.page)
+      fetchImges(this.state.query, this.state.page)
         .then(images =>
           this.setState(prev => ({ images: [...prev.images, ...images] }))
         )
@@ -45,6 +45,9 @@ export class App extends Component {
 
   onLoadMore = () => {
     this.setState(prev => ({ page: prev.page + 1, isLoading: true }));
+  };
+  toggleIsLoading = () => {
+    this.setState(prevState => ({ isLoading: !prevState.isLoading }));
   };
 
   onImageClick = largeImage =>

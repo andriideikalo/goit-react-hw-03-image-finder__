@@ -18,4 +18,4 @@ export const getImages = (query, page) => {
     );
 };
 
-export default getImages;
+export default { getImages };

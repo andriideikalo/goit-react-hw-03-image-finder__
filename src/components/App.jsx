@@ -13,7 +13,7 @@ export class App extends Component {
     modalImage: null,
     query: '',
     page: 1,
-    lastPage: 1,
+    lastPage: false,
     showModal: false,
     isLoading: false,
   };
@@ -23,17 +23,22 @@ export class App extends Component {
     if (prevState.query !== query || prevState.page !== page) {
       fetchImges(query, page)
         .then(res => {
-          if (page !== prevState.page) {
-            this.setState(prevState => ({
-              images: [...prevState.images, ...res.data.hits],
-              lastPage: page < Math.ceil(res.data.totalHits / 12),
-            }));
-          } else if (query !== prevState.query) {
-            this.setState({
-              images: res.data.hits,
-              lastPage: page < Math.ceil(res.data.totalHits / 12),
-            });
-          }
+          this.setState(prevState => ({
+            images: [...prevState.images, ...res.data.hits],
+            lastPage: page < Math.ceil(res.data.totalHits / 12),
+          }));
+
+          // if (page !== prevState.page) {
+          //   this.setState(prevState => ({
+          //     images: [...prevState.images, ...res.data.hits],
+          //     lastPage: page < Math.ceil(res.data.totalHits / 12),
+          //   }));
+          // } else if (query !== prevState.query) {
+          //   this.setState({
+          //     images: res.data.hits,
+          //     lastPage: page < Math.ceil(res.data.totalHits / 12),
+          //   });
+          // }
         })
         .catch(console.log)
         .finally(() => this.setState({ isLoading: false }));
@@ -47,6 +52,7 @@ export class App extends Component {
       query: query,
       page: 1,
       images: [],
+      lastPage: false,
       showModal: false,
       isLoading: true,
     });

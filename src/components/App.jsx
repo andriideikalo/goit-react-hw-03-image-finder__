@@ -31,11 +31,10 @@ export class App extends Component {
           } else if (query !== prevState.query) {
             this.setState({
               images: res.data.hits,
-              lastPage: Math.ceil(res.data.totalHits / 12),
+              lastPage: page < Math.ceil(res.data.totalHits / 12),
             });
           }
         })
-
         .catch(console.log)
         .finally(() => this.setState({ isLoading: false }));
     }
